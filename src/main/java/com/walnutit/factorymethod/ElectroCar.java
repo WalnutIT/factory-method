@@ -15,12 +15,20 @@
  */
 package com.walnutit.factorymethod;
 
+import com.walnutit.factorymethod.domain.features.ElectroCarFeatures;
+
 /**
  * @author Daniel Krentzlin
  *
  */
 public abstract class ElectroCar {
-	
+
+	protected ElectroCarFeatures electroCarFeatures;
+
+	public ElectroCar(ElectroCarFeatures electroCarFeatures) {
+		this.electroCarFeatures = electroCarFeatures;
+	}
+
 	public abstract void addToProduction();
 
 }

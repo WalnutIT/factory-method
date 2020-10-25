@@ -25,18 +25,8 @@ import com.walnutit.factorymethod.utils.Timer;
  */
 public class ID4Version1 extends ElectroCar {
 
-	private ElectroCarFeatures carFeatures;
-
-	public static ID4Version1 getID4Version1(
-			ElectroCarFeatures carFeatures) {
-		return new ID4Version1(carFeatures);
-	}
-
-	/**
-	 * @param carFeatures
-	 */
-	private ID4Version1(ElectroCarFeatures carFeatures) {
-		this.carFeatures = carFeatures;
+	public ID4Version1(ElectroCarFeatures electroCarFeatures) {
+		super(electroCarFeatures);
 	}
 
 	@Override
@@ -47,25 +37,27 @@ public class ID4Version1 extends ElectroCar {
 		Timer.sleep(1);
 		System.out.println("... starting production");
 		Timer.sleep(1);
-		System.out.println("... adding " + carFeatures.getEngine());
+		System.out.println(
+				"... adding " + electroCarFeatures.getEngine());
 		Timer.sleep(4);
-		System.out.println(
-				"... adding " + carFeatures.getBatteryCapacity());
+		System.out.println("... adding "
+				+ electroCarFeatures.getBatteryCapacity());
 		Timer.sleep(6);
-		System.out.println(
-				"... painting car in " + carFeatures.getColor());
+		System.out.println("... painting car in "
+				+ electroCarFeatures.getColor());
 		Timer.sleep(3);
-		System.out.println("... adding rim: " + carFeatures.getRim());
+		System.out.println(
+				"... adding rim: " + electroCarFeatures.getRim());
 		Timer.sleep(2);
 		System.out.println("... adding extra equipement package: "
-				+ carFeatures.getExtraEquipment());
+				+ electroCarFeatures.getExtraEquipment());
 		Timer.sleep(3);
 		System.out.println(
 				"... finished production of VW ID 3 Version 2 with configuration id: "
-						+ carFeatures.getConfigurationId());
+						+ electroCarFeatures.getConfigurationId());
 		Timer.sleep(2);
 		System.out.println("... electro car with configuration id "
-				+ carFeatures.getConfigurationId()
+				+ electroCarFeatures.getConfigurationId()
 				+ " is ready for testing");
 	}
 
