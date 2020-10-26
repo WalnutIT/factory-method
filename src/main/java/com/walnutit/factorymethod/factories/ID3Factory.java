@@ -24,12 +24,8 @@ import com.walnutit.factorymethod.FactoryZwickau;
  */
 public class ID3Factory extends FactoryZwickau {
 
-	ElectroCar electroCar;
-
 	public ID3Factory(ElectroCar electroCar) {
-
-		this.electroCar = electroCar;
-
+		super(electroCar);
 	}
 
 	@Override

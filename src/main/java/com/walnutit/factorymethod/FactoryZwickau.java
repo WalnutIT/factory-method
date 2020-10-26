@@ -20,10 +20,14 @@ package com.walnutit.factorymethod;
  *
  */
 public abstract class FactoryZwickau {
-	
-	public ElectroCar startCarProductionProcess() {
-		return buildElectroCar();
+
+	protected ElectroCar electroCar;
+
+	public FactoryZwickau(ElectroCar electroCar) {
+
+		this.electroCar = electroCar;
+
 	}
-	
+
 	protected abstract ElectroCar buildElectroCar();
 }
